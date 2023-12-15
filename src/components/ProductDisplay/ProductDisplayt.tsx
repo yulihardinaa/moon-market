@@ -2,7 +2,7 @@
 
 import {useEffect} from 'react';
 import Image from 'next/image'
-import { Button } from '../ui/button';
+import QuantityButton from '../Button/QuantityButton';
 
 
 const ProductDisplay = ({
@@ -32,31 +32,7 @@ const ProductDisplay = ({
                    Price:{" "}${data.price}
                 </p>
             </div>
-            <div className="relative gap-3 justify-between flex">
-                <div className="relative text-center">
-                <Button>
-                    Add to Cart  
-                </Button>
-                </div>
-                <div className="flex gap-1">
-                 <div className="relative bg-slate-200 w-10 text-center rounded-l">
-                    <p>
-                      -      
-                    </p>
-                </div>
-                <div className="relative bg-slate-200 w-10 text-center">
-                <p>
-                     0       
-                    </p>
-                </div>
-                <div className="relative bg-slate-200 w-10 text-center rounded-r ">
-                <p>
-                   +       
-                    </p>
-                </div>   
-                </div>
-                
-            </div>
+            <QuantityButton cart={false} key={data.id} productId={data.id} product={data}/>
         </div>
     );
 }

@@ -1,16 +1,6 @@
-// ProductList.tsx
-
 import ProductDisplay from '../ProductDisplay/ProductDisplayt';
 import ProductDisplayWrapper from './ProductDisplayWrapper';
-
-export interface Product {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  category: string;
-  rating: object;
-}
+import { Product } from '@/store/ProductStore';
 
 const ProductList = async () => {
   async function getData() {
